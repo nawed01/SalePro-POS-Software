@@ -1,4 +1,5 @@
 ******************Read Me******************
+# Build using Apache NetBeans.
 # Some features are disable for employee users.
 # First create an account for admin as same --> (Username = admin)
   set any password for admin.
