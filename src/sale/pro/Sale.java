@@ -124,16 +124,17 @@ public class Sale extends javax.swing.JPanel {
          }  
             
        //invoice number update/save
+       Statement statement = db.mycon().createStatement();
        try{
            String id = in_id.getText();
-           Statement s = db.mycon().createStatement();
-           s.execute ("UPDATE extra SET val='"+id+"' WHERE exid= 1");
-           s.close();
+           statement.execute ("UPDATE extra SET val='"+id+"' WHERE exid= 1");
        }
-       
        catch (SQLException e){
            System.out.println(e);
        }
+     finally{
+      statement.close();
+     }
         
        //Print Invoice 
        
